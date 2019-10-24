@@ -1,5 +1,5 @@
 const socket = io()
 
-socket.on('countUpdated', () => {
-    console.log('The count has been updated!')
+socket.on('countUpdated', (count) => {
+    console.log('The count has been updated!', count)
 })
