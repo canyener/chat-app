@@ -10,3 +10,11 @@ socket.on('message', (message) => {
 // document.querySelector('#increment').addEventListener('click', () => {
 //     socket.emit('increment')
 // })
+
+document.querySelector('#message-form').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const message = documetn.querySelector('input').value
+    
+    socket.emit('sendMessage', message)
+})
