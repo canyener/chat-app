@@ -18,6 +18,7 @@ app.use(express.static(publicDirectoryPath))
 io.on('connection', (socket) => {
     console.log('New WebSocket connection')
 
+    socket.emit('message', 'Welcome!')
     // socket.emit('countUpdated', count)
 
     // socket.on('increment', () => {
