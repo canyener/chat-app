@@ -11,3 +11,7 @@ document.querySelector('#message-form').addEventListener('submit', (e) => {
     
     socket.emit('sendMessage', message)
 })
+
+document.querySelector('#send-location').addEventListener('click', () => {
+    
+})
