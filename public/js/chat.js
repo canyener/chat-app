@@ -24,11 +24,13 @@ document.querySelector('#send-location').addEventListener('click', () => {
     }
 
     navigator.geolocation.getCurrentPosition((position) => {
-        const location = {
+        const coords = {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
         }
 
-        socket.emit('sendLocation', location)
+        socket.emit('sendLocation', coords, (message) => {
+            console.log(message)
+        })
     })
 })
