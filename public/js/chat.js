@@ -35,6 +35,8 @@ $sendLocationButton.addEventListener('click', () => {
         return alert('Geolocation is not supported by your browser')
     }
 
+    $sendLocationButton.setAttribute('disabled', 'disabled')
+
     navigator.geolocation.getCurrentPosition((position) => {
         const coords = {
             latitude: position.coords.latitude,
