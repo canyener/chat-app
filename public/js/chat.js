@@ -3,6 +3,7 @@ const socket = io()
 //Elements
 const $messageForm = document.querySelector('#message-form')
 const $messageFormInput = $messageForm.querySelector('input')
+const $messageFormButton = $messageForm.querySelector('button')
 
 socket.on('message', (message) => {
     console.log(message)
@@ -11,14 +12,18 @@ socket.on('message', (message) => {
 $messageForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
+    $messageFormButton.setAttribute('disabled', 'disabled')
+
     const message = e.target.elements.message.value
     
     socket.emit('sendMessage', message, (error) => {
-       if(error) {
-           return console.log(error)
-       }
+        $messageFormButton.removeAttribute('disabled')
 
-       console.log('Message delivered!')
+        if(error) {
+            return console.log(error)
+        }
+
+        console.log('Message delivered!')
     })
 })
 
