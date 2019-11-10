@@ -44,6 +44,8 @@ $sendLocationButton.addEventListener('click', () => {
         }
 
         socket.emit('sendLocation', coords, (message) => {
+            $sendLocationButton.removeAttribute('disabled')
+            $messageFormInput.focus()
             console.log(message)
         })
     })
