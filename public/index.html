@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="/css/styles.min.css">
 </head>
 <body>
-    <p>Chat App</p>
-
-    <div id="messages"></div>
+    <div class="chat">
+        <div class="chat__sidebar"></div>
+        <div class="chat__main">
+            <div id="messages"></div>
    
-    <form id="message-form">
-        <input name="message" placeholder="Message">
-        <button>Send</button>
-    </form>
-    <button id="send-location">Send Location</button>
+            <form id="message-form">
+                <input name="message" placeholder="Message">
+                <button>Send</button>
+            </form>
+            <button id="send-location">Send Location</button>
+        </div>
+    </div>
 
     <script id="message-template" type="text/html">
         <div>
