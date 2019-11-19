@@ -55,7 +55,7 @@ io.on('connection', (socket) => {
     socket.on('sendLocation', (coords, callback) => {
         const user = getUser(socket.id)
         if (user) {
-            io.to(user.room).emit('locationMessage', generateLocationMessage(coords))
+            io.to(user.room).emit('locationMessage', generateLocationMessage(user.username, coords))
             callback('Location shared!')    
         }
     })
