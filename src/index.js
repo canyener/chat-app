@@ -53,8 +53,11 @@ io.on('connection', (socket) => {
     })
 
     socket.on('sendLocation', (coords, callback) => {
-        io.emit('locationMessage', generateLocationMessage(coords))
-        callback('Location shared!')
+        const user = getUser(socket.id)
+        if (user) {
+            io.to(user.room).emit('locationMessage', generateLocationMessage(coords))
+            callback('Location shared!')    
+        }
     })
 
     socket.on('disconnect', () => {
