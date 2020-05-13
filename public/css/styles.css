@@ -10,10 +10,6 @@ html {
     font-size: 16px;
 }
 
-input {
-    font-size: 14px;
-}
-
 body {
     line-height: 1.4;
     color: #333333;
@@ -33,6 +29,7 @@ label {
 
 input {
     border: 1px solid #eeeeee;
+    font-size: 14px;
     padding: 12px;
     outline: none;
 }
