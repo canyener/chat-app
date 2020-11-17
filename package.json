@@ -4,7 +4,7 @@
   "description": "A simple chat application to learn real-time application basics with Node.js",
   "main": "index.js",
   "dependencies": {
-    "bad-words": "^3.0.3",
+    "bad-words": "^3.0.4",
     "express": "^4.17.1",
     "socket.io": "^3.0.1"
   },
