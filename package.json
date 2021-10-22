@@ -9,7 +9,7 @@
     "socket.io": "^4.3.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.14"
   },
   "scripts": {
     "start": "node src/index.js",
