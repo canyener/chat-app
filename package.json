@@ -6,7 +6,7 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "express": "^4.17.1",
-    "socket.io": "^4.3.1"
+    "socket.io": "^4.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
